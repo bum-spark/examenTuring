@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NodeterministaComponent } from './Maquinas/components/nodeterminista/nodeterminista.component';
 import { UtmComponent } from './Maquinas/components/utm/utm.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { UtmComponent } from './Maquinas/components/utm/utm.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+     FormsModule
   ],
   providers: [
     provideClientHydration()
