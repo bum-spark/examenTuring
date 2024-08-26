@@ -1,1 +1,63 @@
-<p>utm works!</p>
+<div class="contenedor">
+    <h2>Simulador de Máquina de Turing Universal</h2>
+  
+    <div class="grupo-formulario">
+      <label>Estados (separados por comas):</label>
+      <input [(ngModel)]="estadosUniversales" placeholder="q0,q1,q2,q_aceptar" />
+    </div>
+  
+    <div class="grupo-formulario">
+      <label>Alfabeto de la cinta (separado por comas):</label>
+      <input [(ngModel)]="alfabetoUniversal" placeholder="0,1,B" />
+    </div>
+  
+    <div class="grupo-formulario">
+      <label>Estado inicial:</label>
+      <input [(ngModel)]="estadoInicialUniversal" placeholder="q0" />
+    </div>
+  
+    <div class="grupo-formulario">
+      <label>Estados de aceptación (separados por comas):</label>
+      <input [(ngModel)]="estadosDeAceptacionUniversales" placeholder="q_aceptar" />
+    </div>
+  
+    <div class="grupo-formulario">
+      <label>Cadena de entrada:</label>
+      <input [(ngModel)]="cadenaEntradaUniversal" placeholder="111" />
+    </div>
+  
+    <button (click)="rellenarConEjemplo()">Rellenar con Ejemplo</button>
+  
+    <h3>Transiciones</h3>
+    <div *ngFor="let transicion of transicionesUniversales; let i = index" class="transicion">
+      <label>De:</label>
+      <input [(ngModel)]="transicion.estadoActual" placeholder="q0" />
+      <label>Lee:</label>
+      <input [(ngModel)]="transicion.simboloLeido" placeholder="1" />
+      <label>A:</label>
+      <input [(ngModel)]="transicion.siguienteEstado" placeholder="q_aceptar" />
+      <label>Escribe:</label>
+      <input [(ngModel)]="transicion.simboloEscrito" placeholder="1" />
+      <label>Mueve:</label>
+      <select [(ngModel)]="transicion.direccionMovimiento">
+        <option value="L">Izquierda</option>
+        <option value="R">Derecha</option>
+      </select>
+    </div>
+    <button (click)="agregarTransicionUniversal()">Agregar Transición</button>
+  
+    <div class="grupo-formulario">
+      <button (click)="simularUniversal()">Simular</button>
+    </div>
+  
+    <h3>Resultados</h3>
+    <div *ngIf="resultadoUniversal.length > 0; else noResultados">
+      <div *ngFor="let res of resultadoUniversal">
+        <p>{{ res }}</p>
+      </div>
+    </div>
+    <ng-template #noResultados>
+      <p>No se encontró ningún resultado. Verifica las transiciones y vuelve a intentarlo.</p>
+    </ng-template>
+  </div>
+  
