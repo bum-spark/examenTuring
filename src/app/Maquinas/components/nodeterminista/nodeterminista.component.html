@@ -1,1 +1,46 @@
-<p>nodeterminista works!</p>
+<div class="container">
+    <h2>Simulación de Máquina de Turing No Determinista</h2>
+    
+    <div class="section">
+      <label>Estados:</label>
+      <input [(ngModel)]="estados" placeholder="q0, q1, q2, q3" />
+    </div>
+    
+    <div class="section">
+      <label>Alfabeto de la cinta:</label>
+      <input [(ngModel)]="alfabetoCinta" placeholder="0, 1, _" />
+    </div>
+    
+    <div class="section">
+      <label>Reglas de transición (estado actual, símbolo leído, nuevo estado, símbolo escrito, dirección):</label>
+      <textarea [(ngModel)]="transicionesTexto" placeholder="q0,0,q1,1,R; q0,1,q2,0,R; q2,1,q2,1,R; q2,_,q3,_,R"></textarea>
+    </div>
+    
+    <div class="section">
+      <label>Estado inicial:</label>
+      <input [(ngModel)]="estadoInicial" placeholder="q0" />
+    </div>
+    
+    <div class="section">
+      <label>Estados de aceptación:</label>
+      <input [(ngModel)]="estadosAceptacion" placeholder="q3" />
+    </div>
+    
+    <div class="section">
+      <label>Cadena de entrada:</label>
+      <input [(ngModel)]="cadenaEntrada" placeholder="11111" />
+    </div>
+  
+    <div class="button-container">
+      <button (click)="simular()">Simular</button>
+      <button (click)="automataEjemplo()">Rellenar con Ejemplo</button>
+    </div>
+  
+    <div *ngIf="resultado.length" class="results">
+      <h3>Resultados:</h3>
+      <ul>
+        <li *ngFor="let linea of resultado">{{ linea }}</li>
+      </ul>
+    </div>
+  </div>
+  
