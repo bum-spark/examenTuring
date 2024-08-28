@@ -1,0 +1,112 @@
+.navbar {
+    background-color: #2d3748; /* bg-gray-800 */
+    padding: 0.5rem 1rem;
+  }
+  
+  .container {
+    max-width: 1120px; /* max-w-7xl */
+    margin: 0 auto;
+    padding: 0 1rem; /* px-4 sm:px-6 lg:px-8 */
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem; /* h-16 */
+    position: relative;
+  }
+  
+  .menu-button-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* sm:hidden */
+  }
+  
+  .menu-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: #a0aec0; /* text-gray-400 */
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background-color: #4a5568; /* hover:bg-gray-700 */
+    color: white;
+  }
+  
+  .menu-icon {
+    height: 1.5rem; /* h-6 */
+    width: 1.5rem; /* w-6 */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-name {
+    color: #a0aec0; /* text-gray-300 */
+    font-weight: 500;
+  }
+  
+  .navbar-links {
+    display: none; /* hidden sm:block */
+    margin-left: 1.5rem; /* sm:ml-6 */
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem; /* px-3 py-2 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #a0aec0; /* text-gray-300 */
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    background-color: #4a5568; /* hover:bg-gray-700 */
+    color: white;
+  }
+  
+  .active-link {
+    background-color: #1a202c; /* bg-gray-900 */
+    color: white;
+  }
+  
+  .mobile-menu {
+    display: block;
+    padding: 0.5rem 1rem; /* px-2 pb-3 pt-2 */
+    background-color: #2d3748; /* bg-gray-800 */
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 0.5rem 1rem; /* px-3 py-2 */
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* font-medium */
+    color: white;
+    text-decoration: none;
+  }
+  
+  .mobile-nav-link:hover {
+    background-color: #4a5568; /* hover:bg-gray-700 */
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 640px) {
+    .menu-button-container {
+      display: none;
+    }
+    
+    .navbar-links {
+      display: flex;
+    }
+  }
+  
