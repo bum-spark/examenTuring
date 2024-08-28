@@ -103,3 +103,6 @@ El proyecto está organizado en componentes de Angular, cada uno encargado de si
 
 **NavBarComponent**: Navegador entre las diferentes simulaciones.
 
+# Simulador de maquina
+Desde este link puedes ver la mquina funcionando
+[Simulador de maquina de Turing]([https://celadon-manatee-7923e4.netlify.app/]).
